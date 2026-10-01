@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 18 (Повышенный) — Бронирование мероприятия</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Бронирование мероприятия</h1>
+    <p class="subtitle">Задание №18 (Повышенный уровень)</p>
+
+    <form id="bookingForm" novalidate>
+      <div class="field">
+        <label for="fio">ФИО</label>
+        <input type="text" id="fio" placeholder="Иванов Иван Иванович">
+        <span class="error" id="fioError"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="example@mail.com">
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="field">
+        <label>Категория билета</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="ticket" value="standard" data-price="5000">
+            Standard — 5 000 ₸
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="ticket" value="vip" data-price="10000">
+            VIP — 10 000 ₸
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="ticket" value="premium" data-price="15000">
+            Premium — 15 000 ₸
+          </label>
+        </div>
+        <span class="error" id="ticketError"></span>
+      </div>
+
+      <div class="field">
+        <label for="quantity">Количество билетов</label>
+        <input type="number" id="quantity" min="1" value="1">
+        <span class="error" id="quantityError"></span>
+      </div>
+
+      <div class="field">
+        <label>Дополнительные опции</label>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="checkbox" name="addon" value="coffee" data-price="1000">
+            Кофе-брейк — +1 000 ₸ / билет
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="addon" value="parking" data-price="1500">
+            Парковка — +1 500 ₸ / билет
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="addon" value="photo" data-price="2000">
+            Фотосессия — +2 000 ₸ / билет
+          </label>
+        </div>
+      </div>
+
+      <div class="live-total" id="liveTotal">Итого: 0 ₸</div>
+
+      <button type="submit">Забронировать</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

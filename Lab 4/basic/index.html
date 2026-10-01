@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 1 (Базовый) — Регистрация студента</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Форма регистрации студента</h1>
+    <p class="subtitle">Задание №1 (Базовый уровень)</p>
+
+    <form id="studentForm" novalidate>
+      <div class="field">
+        <label for="fio">ФИО</label>
+        <input type="text" id="fio" placeholder="Иванов Иван Иванович">
+        <span class="error" id="fioError"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="example@mail.com">
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="field">
+        <label for="course">Курс</label>
+        <select id="course">
+          <option value="">Выберите курс</option>
+          <option value="1">1 курс</option>
+          <option value="2">2 курс</option>
+          <option value="3">3 курс</option>
+          <option value="4">4 курс</option>
+        </select>
+        <span class="error" id="courseError"></span>
+      </div>
+
+      <div class="field checkbox-field">
+        <label>
+          <input type="checkbox" id="agree">
+          Согласен с правилами обучения
+        </label>
+        <span class="error" id="agreeError"></span>
+      </div>
+
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

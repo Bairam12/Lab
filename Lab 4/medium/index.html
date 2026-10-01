@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 7 (Средний) — Регистрация аккаунта</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Регистрация аккаунта</h1>
+    <p class="subtitle">Задание №7 (Средний уровень)</p>
+
+    <form id="accountForm" novalidate>
+      <div class="field">
+        <label for="login">Логин</label>
+        <input type="text" id="login" placeholder="Минимум 3 символа">
+        <span class="error" id="loginError"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="example@mail.com">
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Минимум 8 символов">
+        <span class="hint" id="passwordHint">Длина: 0 / 8</span>
+        <span class="error" id="passwordError"></span>
+      </div>
+
+      <div class="field">
+        <label for="passwordConfirm">Повтор пароля</label>
+        <input type="password" id="passwordConfirm" placeholder="Повторите пароль">
+        <span class="error" id="passwordConfirmError"></span>
+      </div>
+
+      <button type="submit">Создать аккаунт</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
