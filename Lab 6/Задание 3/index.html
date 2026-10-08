@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Поймай объект</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Поймай объект</h1>
+    <div class="stats">
+      <span>Попаданий: <b id="score">0</b> / <b id="goal">10</b></span>
+      <span>Время: <b id="time">0.0</b> с</span>
+      <span>Рекорд: <b id="best">—</b></span>
+    </div>
+    <div id="field">
+      <button id="target" title="Кликни меня!">★</button>
+      <div id="result" class="hidden">
+        <h2>Игра окончена!</h2>
+        <p id="resultText"></p>
+        <button id="restartBtn">Играть снова</button>
+      </div>
+    </div>
+    <p class="info">Нажми на звезду. Клавиша R — перезапуск.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

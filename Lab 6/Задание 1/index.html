@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Блок заметок</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Заметки</h1>
+    <div class="row">
+      <input type="text" id="noteInput" placeholder="Введите текст заметки...">
+      <button id="addBtn">Добавить</button>
+    </div>
+    <p id="message" class="message"></p>
+    <p class="info">Всего заметок: <b id="counter">0</b> · Ctrl+Enter — быстрое добавление</p>
+    <ul id="noteList"></ul>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
