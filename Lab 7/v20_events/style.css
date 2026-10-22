@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #eef1f6; margin: 0; padding: 20px 12px; color: #222; }
+.app { max-width: 820px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.1); overflow: hidden; }
+header { background: #2d4fa8; color: #fff; padding: 18px 22px; }
+header h1 { margin: 0; font-size: 24px; }
+nav { display: flex; flex-wrap: wrap; border-bottom: 2px solid #dfe5f2; background: #f5f7fc; }
+nav button { flex: 1 1 120px; padding: 14px 10px; border: 0; background: transparent; font-size: 16px; cursor: pointer; color: #445; border-bottom: 4px solid transparent; }
+nav button:hover { background: #e6ecfa; }
+nav button:focus-visible { outline: 3px solid #f5b400; outline-offset: -3px; }
+nav button.active { color: #2d4fa8; font-weight: bold; background: #fff; border-bottom-color: #2d4fa8; }
+.badge { display: inline-block; min-width: 22px; margin-left: 6px; padding: 1px 7px; border-radius: 11px; background: #2d4fa8; color: #fff; font-size: 13px; }
+main { padding: 20px 22px; min-height: 280px; }
+h2 { margin-top: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.card { background: #f6f8fc; border-left: 4px solid #2d4fa8; border-radius: 8px; padding: 14px; }
+.card h3 { margin: 0 0 8px; }
+.card p { margin: 4px 0; color: #444; }
+button.action, form button { padding: 9px 14px; border: 0; border-radius: 6px; background: #2d4fa8; color: #fff; cursor: pointer; font-size: 15px; }
+button.action:hover, form button:hover { background: #1f3a80; }
+button.danger { background: #d33; }
+button:disabled { background: #aab; cursor: not-allowed; }
+input, select { padding: 10px; border: 1px solid #bbb; border-radius: 6px; font-size: 15px; width: 100%; }
+.error { color: #d33; min-height: 20px; margin: 6px 0; }
+.ok { color: #1a8a3a; }
+.empty { color: #777; font-style: italic; }
+ul.list { list-style: none; padding: 0; margin: 0; }
+ul.list li { display: flex; align-items: center; gap: 10px; background: #f6f8fc; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+ul.list li .grow { flex: 1; }
+@media (max-width: 480px) { main { padding: 14px; } header h1 { font-size: 20px; } }
+.field { margin-bottom: 12px; }
+.field label { display: block; margin-bottom: 4px; font-weight: bold; }
+input.invalid, select.invalid { border-color: #d33; background: #fff3f3; }
+.search { margin-bottom: 12px; }
+.seats { font-weight: bold; }
+.seats.none { color: #d33; }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Управление мероприятиями</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header><h1>Управление мероприятиями</h1></header>
+    <nav id="tabs" role="tablist">
+      <button role="tab" data-page="events">События</button>
+      <button role="tab" data-page="register">Регистрация</button>
+      <button role="tab" data-page="participants">Участники <span class="badge" id="badge">0</span></button>
+    </nav>
+    <main id="content" aria-live="polite"></main>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
