@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Личный бюджет</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Личный бюджет</h1>
+    <form id="opForm">
+      <select id="type">
+        <option value="income">Доход</option>
+        <option value="expense">Расход</option>
+      </select>
+      <select id="category"></select>
+      <input type="number" id="amount" placeholder="Сумма, ₸" min="0.01" step="0.01">
+      <input type="date" id="date">
+      <button type="submit" id="submitBtn">Добавить</button>
+      <button type="button" id="cancelBtn" class="light" hidden>Отмена</button>
+    </form>
+    <p id="message" class="message" role="status"></p>
+
+    <div class="tools">
+      <label for="month">Месяц сводки:</label>
+      <input type="month" id="month">
+      <button id="allBtn" class="light">Всё время</button>
+    </div>
+    <div class="summary">
+      <div>Доходы<b id="sumIncome" class="plus">0</b></div>
+      <div>Расходы<b id="sumExpense" class="minus">0</b></div>
+      <div>Баланс<b id="sumBalance">0</b></div>
+    </div>
+    <p class="info" id="byCategory"></p>
+
+    <ul id="list" class="list"></ul>
+    <div class="tools">
+      <button id="exportBtn" class="light">Экспорт в JSON</button>
+      <button id="importBtn" class="light">Импорт из JSON</button>
+      <button id="clearBtn" class="danger">Очистить всё</button>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+    </div>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
