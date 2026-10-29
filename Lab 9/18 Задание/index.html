@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вариант 18: Promise.all</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>Пользователи и число публикаций</h1>
+  <p class="hint">Параллельно: GET /users и GET /posts через Promise.all()</p>
+
+  <div class="panel">
+    <button id="load" type="button">Загрузить</button>
+  </div>
+
+  <p id="status" class="status" role="status"></p>
+  <button id="retry" class="secondary" type="button" hidden>Повторить запрос</button>
+
+  <table id="table" hidden>
+    <thead>
+      <tr><th>№</th><th>Имя</th><th>Email</th><th>Публикаций</th><th></th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <p id="timing" class="stats"></p>
+</body>
+</html>

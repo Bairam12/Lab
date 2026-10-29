@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вариант 14: каталог альбомов</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>Каталог альбомов</h1>
+  <p class="hint">GET /albums, затем GET /photos?albumId={id}</p>
+
+  <div class="layout">
+    <section>
+      <h2>Альбомы</h2>
+      <p id="albumsStatus" class="status" role="status"></p>
+      <button id="retryAlbums" class="secondary" type="button" hidden>Повторить</button>
+      <div id="albums"></div>
+    </section>
+    <section>
+      <h2 id="photosTitle">Фотографии</h2>
+      <p id="photosStatus" class="status" role="status">Выберите альбом слева</p>
+      <button id="retryPhotos" class="secondary" type="button" hidden>Повторить</button>
+      <div id="photos" class="grid"></div>
+    </section>
+  </div>
+  <p id="stats" class="stats"></p>
+</body>
+</html>

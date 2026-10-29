@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вариант 3: список задач</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>Список задач</h1>
+  <p class="hint">GET https://jsonplaceholder.typicode.com/todos?_limit=10</p>
+
+  <div class="panel">
+    <button id="load" type="button">Загрузить</button>
+    <span id="summary" class="meta"></span>
+  </div>
+
+  <p id="status" class="status" role="status"></p>
+  <button id="retry" class="secondary" type="button" hidden>Повторить запрос</button>
+
+  <ul id="results" class="list"></ul>
+</body>
+</html>
