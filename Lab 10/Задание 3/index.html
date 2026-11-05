@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вариант 17 — Бронирование аудиторий</title>
+<link rel="stylesheet" href="./styles/style.css"></head>
+<body><main>
+  <h1>Бронирование аудиторий</h1>
+  <form id="booking-form" novalidate>
+    <div class="row">
+      <label>Аудитория<select id="room"></select></label>
+      <label>Дата<input id="date" type="date"></label>
+      <label>Начало<input id="start" type="time"></label>
+      <label>Окончание<input id="end" type="time"></label>
+    </div>
+    <div class="row">
+      <label>Цель бронирования<input id="purpose" type="text" placeholder="Например: лекция по JS"></label>
+      <label>Участников<input id="attendees" type="number" min="1" value="10"></label>
+    </div>
+    <button type="submit">Забронировать</button>
+  </form>
+  <ul id="errors" class="errors" aria-live="polite"></ul>
+  <p id="message" class="success" aria-live="polite"></p>
+
+  <h2>Список бронирований</h2>
+  <label>Показать на дату<input id="filter-date" type="date"></label>
+  <button id="clear-filter" class="secondary" type="button">Показать все</button>
+  <table>
+    <thead><tr><th>Дата</th><th>Время</th><th>Аудитория</th><th>Цель</th><th>Чел.</th><th></th></tr></thead>
+    <tbody id="bookings"></tbody>
+  </table>
+</main>
+<script type="module" src="./src/main.js"></script>
+<script>
+  // Если ES-модули не загрузились (открытие через file://), подключаем запасной скрипт.
+  window.addEventListener("load", function () {
+    if (!window.__modulesOk) {
+      var s = document.createElement("script");
+      s.src = "./src/fallback.js";
+      document.body.append(s);
+    }
+  });
+</script>
+</body></html>

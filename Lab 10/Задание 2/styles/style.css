@@ -1,0 +1,20 @@
+body { font: 16px Arial, sans-serif; margin: 0; background: #f4f6f8; color: #222; }
+main { max-width: 860px; margin: 2rem auto; padding: 0 1rem; }
+h1 { font-size: 1.5rem; }
+label { display: block; margin: .6rem 0; font-weight: 600; }
+input, textarea, select { display: block; width: 100%; box-sizing: border-box; padding: .5rem; margin-top: .25rem; font: inherit; border: 1px solid #b8c0c8; border-radius: 6px; }
+button { padding: .5rem 1rem; margin: .5rem .5rem .5rem 0; border: 0; border-radius: 6px; background: #2f6fed; color: #fff; font: inherit; cursor: pointer; }
+button[type=reset], button.secondary { background: #6b7785; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.counter { margin: .2rem 0; font-size: .85rem; color: #556; }
+.counter.over { color: #c0392b; }
+.errors { color: #c0392b; padding-left: 1.2rem; }
+.success { color: #1e8449; font-weight: 600; }
+.error { color: #c0392b; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.card { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 3px #0002; }
+.card h3 { margin: .2rem 0 .5rem; font-size: 1.05rem; }
+.card p { margin: .2rem 0; font-size: .9rem; color: #445; }
+.empty { color: #556; }
+table { width: 100%; border-collapse: collapse; background: #fff; margin-top: .5rem; }
+th, td { padding: .5rem; border-bottom: 1px solid #dde; text-align: left; font-size: .9rem; }

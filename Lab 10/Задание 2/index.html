@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вариант 11 — Каталог книг</title>
+<link rel="stylesheet" href="./styles/style.css"></head>
+<body><main>
+  <h1>Каталог книг</h1>
+  <div class="row">
+    <label>Поиск (название или автор)<input id="search" type="search" placeholder="Например: дюна"></label>
+    <label>Жанр<select id="genre"></select></label>
+    <label>Год издания не раньше<input id="min-year" type="text" inputmode="numeric" placeholder="Например: 1950"></label>
+    <label>Сортировка
+      <select id="sort">
+        <option value="title:asc">Название А→Я</option>
+        <option value="title:desc">Название Я→А</option>
+        <option value="year:asc">Год ↑</option>
+        <option value="year:desc">Год ↓</option>
+        <option value="rating:desc">Рейтинг ↓</option>
+      </select></label>
+  </div>
+  <button id="reset" class="secondary" type="button">Сбросить фильтры</button>
+  <p id="status" aria-live="polite"></p>
+  <section id="list" class="grid"></section>
+</main>
+<script type="module" src="./src/main.js"></script>
+<script>
+  // Если ES-модули не загрузились (открытие через file://), подключаем запасной скрипт.
+  window.addEventListener("load", function () {
+    if (!window.__modulesOk) {
+      var s = document.createElement("script");
+      s.src = "./src/fallback.js";
+      document.body.append(s);
+    }
+  });
+</script>
+</body></html>

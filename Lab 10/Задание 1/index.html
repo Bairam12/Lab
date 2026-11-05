@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вариант 6 — Проверка текстового ввода</title>
+<link rel="stylesheet" href="./styles/style.css"></head>
+<body><main>
+  <h1>Проверка текстового ввода</h1>
+  <form id="form" novalidate>
+    <label>Имя пользователя (3–20 символов)
+      <input id="username" type="text" autocomplete="off"></label>
+    <p class="counter" id="username-counter"></p>
+    <label>Комментарий (10–200 символов)
+      <textarea id="comment" rows="4"></textarea></label>
+    <p class="counter" id="comment-counter"></p>
+    <button type="submit">Проверить</button>
+    <button type="reset">Очистить</button>
+  </form>
+  <ul id="errors" class="errors" aria-live="polite"></ul>
+  <p id="success" class="success" aria-live="polite"></p>
+</main>
+<script type="module" src="./src/main.js"></script>
+<script>
+  // Если ES-модули не загрузились (открытие через file://), подключаем запасной скрипт.
+  window.addEventListener("load", function () {
+    if (!window.__modulesOk) {
+      var s = document.createElement("script");
+      s.src = "./src/fallback.js";
+      document.body.append(s);
+    }
+  });
+</script>
+</body></html>
