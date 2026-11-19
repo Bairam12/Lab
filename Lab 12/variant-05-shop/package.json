@@ -1,0 +1,8 @@
+{
+  "name": "lab12-variant05-shop",
+  "version": "1.0.0",
+  "description": "ЛР №12, вариант 5: прототип входа в интернет-магазин (гость / пользователь)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node tests.js" },
+  "license": "MIT"
+}

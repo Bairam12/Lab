@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechShop — интернет-магазин</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>TechShop</h1>
+    <div id="guestBar">
+      <span class="badge">Гость</span>
+    </div>
+    <div id="userBar" hidden>
+      <span class="badge user" id="userName"></span>
+      <span class="timer" id="timer" title="Оставшееся время сессии"></span>
+      <button id="logoutBtn" class="secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main>
+    <p id="status" role="status"></p>
+
+    <section id="loginSection" class="card">
+      <h2>Вход</h2>
+      <form id="loginForm" novalidate>
+        <label>Логин <input id="login" autocomplete="username"></label>
+        <label>Пароль <input id="password" type="password" autocomplete="current-password"></label>
+        <button type="submit">Войти</button>
+      </form>
+      <p class="hint">Тестовый аккаунт: <code>student</code> / <code>Test-Pass-123</code></p>
+    </section>
+
+    <section class="card">
+      <h2>Каталог</h2>
+      <p id="guestNote" class="hint">Вы вошли как гость: просматривать каталог можно, а чтобы добавить товар в корзину — войдите.</p>
+      <ul id="products" class="list"></ul>
+    </section>
+
+    <section id="cartSection" class="card" hidden>
+      <h2>Моя корзина</h2>
+      <ul id="cartItems" class="list"></ul>
+      <p class="total">Итого: <strong id="cartTotal">0</strong> ₸</p>
+      <button id="checkoutBtn">Оформить заказ</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

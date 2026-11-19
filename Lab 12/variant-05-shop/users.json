@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "login": "student",
+    "name": "Студент Тестов",
+    "role": "customer",
+    "passwordHash": "scrypt$7a2da1427ec2733686abd2e6249c7a8b$6bce2072dd101d5339da3e5ea7c3535c32d511a109f8e6143ec85c5fdde53151fbd0417464d73062b898ea1b741cd9fcccced2891b5346b801d2b8fe98120a02"
+  },
+  {
+    "id": 2,
+    "login": "aigerim",
+    "name": "Айгерим Тестова",
+    "role": "customer",
+    "passwordHash": "scrypt$42e43597f4a541b4f04f0357eed11e01$de231ef91e97b09048336ed98f0e6a8049b423d2cdc39b38984240ef2912786688908ab3ba44d2a6b10b49d87ba30dff8b7e0590cc6841391b2d05dcb4dd862c"
+  }
+]
