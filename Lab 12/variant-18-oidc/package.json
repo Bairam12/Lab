@@ -1,0 +1,9 @@
+{
+  "name": "lab12-variant18-oidc",
+  "version": "1.0.0",
+  "description": "ЛР №12, вариант 18: OIDC-вход (authorization code + PKCE) через sandbox-провайдера",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node tests.js" },
+  "dependencies": { "openid-client": "^6.1.0" },
+  "license": "MIT"
+}
