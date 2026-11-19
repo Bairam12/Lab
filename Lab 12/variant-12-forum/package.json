@@ -1,0 +1,8 @@
+{
+  "name": "lab12-variant12-forum",
+  "version": "1.0.0",
+  "description": "ЛР №12, вариант 12: мини-форум — гостевой просмотр, вход для публикации, выход",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node tests.js" },
+  "license": "MIT"
+}

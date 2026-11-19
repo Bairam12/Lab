@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "login": "alice",
+    "name": "Алия",
+    "role": "user",
+    "passwordHash": "scrypt$0fee1376509f1fa58c5411703b8a7bda$0f30f9b3b021291e1c10d7c20e2575203761bad58ffd1e9bbc1334401046f525b58081be8dda9c8fe1d09c725b747c20e5d227cf5f23fee18b52d0d54d435bf7"
+  },
+  {
+    "id": 2,
+    "login": "bob",
+    "name": "Борис",
+    "role": "user",
+    "passwordHash": "scrypt$67a9476a300e1dfd9d7c32e91d180975$2588a60df5c85c1d252662a0b4ea8b44361eeab519206406a7eb57cc460ca78ad9f7235a2992a2753d0d2ca02c4d1bf90fc2d58bc75dfbdb94c9388affa6a61e"
+  },
+  {
+    "id": 3,
+    "login": "moderator",
+    "name": "Модератор",
+    "role": "moderator",
+    "passwordHash": "scrypt$a1be2b1fc6292cd8010fcb3e825c79ec$9948e8e73a461ca4f3cfe3e4be83952f3a53ffdc17aeef9383c3d8d5a72ea4938842772e43f86b856170db3b631266db7c1eaa2d34819ccd9c01ac3c4cfc1aee"
+  }
+]
