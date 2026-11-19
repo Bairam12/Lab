@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OIDC-вход (authorization code + PKCE)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Учебный портал</h1>
+    <div id="guestBar"><span class="badge">Гость</span></div>
+    <div id="userBar" hidden>
+      <span class="badge user" id="userName"></span>
+      <span class="timer" id="timer" title="Оставшееся время сессии"></span>
+      <button id="logoutBtn" class="secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main>
+    <p id="status" role="status"></p>
+
+    <section id="loginSection" class="card">
+      <h2>Вход через OpenID Connect</h2>
+      <p>Вход выполняется на стороне провайдера (sandbox). Приложение не получает ваш пароль.</p>
+      <a class="btn" href="/auth/login">Войти через OIDC</a>
+      <p class="hint">Тестовый провайдер: op.panva.hu — на его странице входа можно ввести любой логин, реальные данные не нужны.</p>
+    </section>
+
+    <section id="profileSection" class="card" hidden>
+      <h2>Профиль (защищённый ресурс)</h2>
+      <dl id="claims" class="claims"></dl>
+    </section>
+
+    <dialog id="confirmLogout">
+      <p>Завершить сеанс и выйти из аккаунта?</p>
+      <div class="row">
+        <button id="confirmYes">Да, выйти</button>
+        <button id="confirmNo" class="secondary">Отмена</button>
+      </div>
+    </dialog>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
