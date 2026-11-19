@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учебный портал — OIDC-вход (вариант 18)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Учебный портал</h1>
+    <div id="guestBar"><span class="badge">Гость</span></div>
+    <div id="userBar" hidden>
+      <span class="badge user" id="userName"></span>
+      <span class="timer" id="timer" title="Оставшееся время сессии"></span>
+      <button id="logoutBtn" class="secondary">Выйти</button>
+    </div>
+  </header>
+
+  <main>
+    <p class="notice">Учебная имитация OpenID Connect: роль провайдера играет страница <code>provider.html</code> (файлы <code>idp-core.js</code>, <code>provider.js</code>). Поток — authorization code + PKCE, подпись ID-токена RS256 проверяется настоящей криптографией браузера. Настоящего провайдера (Google и т. п.) здесь нет.</p>
+    <p id="status" role="status"></p>
+
+    <section id="loginSection" class="card">
+      <h2>Вход через OpenID Connect</h2>
+      <p>Вы перейдёте на страницу провайдера. Пароль вводится только там — портал его не видит.</p>
+      <button id="loginBtn">Войти через OIDC</button>
+    </section>
+
+    <section id="profileSection" class="card" hidden>
+      <h2>Профиль (защищённый ресурс)</h2>
+      <dl id="claims" class="claims"></dl>
+      <h2 style="margin-top:16px">Проверки ID-токена на стороне портала</h2>
+      <ul id="checks" class="checks"></ul>
+      <details style="margin-top:12px">
+        <summary>Содержимое ID-токена (JWT не шифруется — payload читается без ключа)</summary>
+        <pre id="jwtDump"></pre>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Панель проверки (для защиты работы)</h2>
+      <label class="check"><input type="checkbox" id="shortTtl"> Короткая сессия (15 с) — для проверки «истёкшая сессия», действует при следующем входе</label>
+      <div class="btnrow" style="margin-top:10px">
+        <button id="profileBtn" class="secondary">Запросить /profile</button>
+        <button id="tamperState" class="secondary">Вход с подменённым state (CSRF)</button>
+        <button id="tamperPkce" class="secondary">Вход с неверным code_verifier (PKCE)</button>
+        <button id="resetBtn" class="secondary">Сбросить данные</button>
+      </div>
+      <p id="checkResult" role="status"></p>
+    </section>
+
+    <dialog id="confirmLogout">
+      <p>Завершить сеанс и выйти из аккаунта?</p>
+      <div class="btnrow" style="justify-content:flex-end">
+        <button id="confirmYes">Да, выйти</button>
+        <button id="confirmNo" class="secondary">Отмена</button>
+      </div>
+    </dialog>
+  </main>
+  <script src="crypto-utils.js"></script>
+  <script src="idp-core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
